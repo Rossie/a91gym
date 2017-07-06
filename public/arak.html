@@ -1,0 +1,76 @@
+<!-- Page Content -->
+<div class="container">
+    <!-- arak -->
+    <a name="arak"></a>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Árak</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><h3>Terem díjak</h3></th>
+                            <th>Felnőtt</th>
+                            <th>12 évesig</th>
+                            <th>Diák<br>Nyugdíjas</th>
+                            <th>Érvényes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in lp.arak track by $index">
+                            <td ng-repeat="cell in row track by $index">{{cell}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><h3>Személyi edzés</h3></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in lp.arak2 track by $index">
+                            <td ng-repeat="cell in row track by $index">{{cell}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><h3>Egyéb</h3></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in lp.arak3 track by $index">
+                            <td ng-repeat="cell in row track by $index">{{cell}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- <div class="clearfix"></div> -->
+
+        <div class="col-md-7">
+            <h3>Általános információk</h3>
+            <ul>
+                <li ng-repeat="item in lp.altinfo">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
